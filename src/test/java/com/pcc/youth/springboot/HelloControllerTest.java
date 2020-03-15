@@ -5,8 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import web.HelloController;
+import com.pcc.youth.springboot.web.HelloController;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -18,7 +21,7 @@ public class HelloControllerTest {
     private MockMvc mvc;
 
     @Test
-    public void 헬로가_리턴된다() throws Exception
+    public void hello가_리턴된다() throws Exception
     {
         String hello = "hello";
 
@@ -28,4 +31,13 @@ public class HelloControllerTest {
 
 
     }
+
+
+    @Test
+    public void 헬로() throws Exception
+    {
+        System.out.println("헬로?");
+
+    }
+
 }
