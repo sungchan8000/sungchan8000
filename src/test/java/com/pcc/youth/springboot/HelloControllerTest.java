@@ -25,6 +25,8 @@ public class HelloControllerTest {
     {
         String hello = "hello";
 
+        String what="why";
+
         mvc.perform(get("/hello"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(hello));
